@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - '3000:3000'
+    links:
+      - server
+  server:
+    build: ./movies-app/server
+    ports:
+    - '5000:5000'
